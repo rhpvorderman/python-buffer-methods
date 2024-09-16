@@ -1,0 +1,5 @@
+exclude .git*
+exclude tox.ini
+prune tests/
+prune .github/
+include src/buffer_methods/*.h
