@@ -13,3 +13,7 @@
 #
 # You should have received a copy of the GNU Affero General Public License
 # along with python-buffer-methods.  If not, see <https://www.gnu.org/licenses/
+
+from typing import Union
+
+def sum(obj, start: int = 0) -> Union[int, float]: ...
