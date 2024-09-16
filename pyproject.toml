@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=60", "setuptools-scm>=8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name="buffer-methods"
+description="Fast operations on Python objects supporting the buffer protocol, such as array.array and memoryview."
+authors = [
+    {name = "Ruben Vorderman", email = "r.h.p.vorderman@lumc.nl"}
+]
+keywords=[
+    "buffer protocol",
+    "fast",
+    "sum",
+]
+readme = "README.rst"
+license = {text = "AGPL-v3.0"}
+classifiers = [
+        "Programming Language :: Python :: 3 :: Only",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
+        "Development Status :: 3 - Alpha",
+        "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+        "Intended Audience :: Developers",
+
+]
+requires-python = ">3.9"
+dependencies = []
+dynamic = ["version"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.exclude-package-data]
+sequali = ["*.c", "*.h"]
+
+[tool.setuptools.package-data]
+sequali = [
+    '*.pyi',
+    'py.typed',
+]
+[project.urls]
+"Homepage" = "https://github.com/rhpvorderman/python-buffer-methods"
+"Issue tracker" = "https://github.com/rhpvorderman/python-buffer-methods/issues"
+
+[tool.setuptools_scm]
+write_to = "src/buffer_methods/_version.py"
